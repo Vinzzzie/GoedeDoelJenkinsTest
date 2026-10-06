@@ -39,4 +39,9 @@ class GoedeDoelTest {
         var slechtDoel = new GoedeDoel(SLECHTE_DOEL_NAAM);
         assertThat(goedeDoel).isNotEqualTo(slechtDoel);
     }
+
+    @Test
+    void doelEqualsAnderTypeObject() {
+        assertThat(goedeDoel).isNotEqualTo(BigDecimal.ZERO);
+    }
 }
