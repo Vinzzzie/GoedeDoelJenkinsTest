@@ -25,28 +25,28 @@ class GoedeDoelTest {
 
     @Test
     void getOpbrengst() {
-        assertThat(goedeDoel.getOpbrengst()).isEqualTo(BigDecimal.ZERO.add(BigDecimal.ONE));
+        assertThat(goedeDoel.getOpbrengst()).isEqualTo(BigDecimal.ZERO);
     }
 
-//    @Test
-//    void doelenMetZelfdeNaamZijnGelijk() {
-//        var goedDoel = new GoedeDoel(GOEDE_DOEL_NAAM);
-//        assertThat(goedeDoel).isEqualTo(goedDoel);
-//    }
-//
-//    @Test
-//    void doelenMetVerschillendeNaamZijnVerschillend() {
-//        var slechtDoel = new GoedeDoel(SLECHTE_DOEL_NAAM);
-//        assertThat(goedeDoel).isNotEqualTo(slechtDoel);
-//    }
-//
-//    @Test
-//    void doelEqualsAnderTypeObject() {
-//        assertThat(goedeDoel).isNotEqualTo(BigDecimal.ZERO);
-//    }
-//
-//    @Test
-//    void gelijkeDoelenHebbenZelfdeHashCode() {
-//        assertThat(goedeDoel).hasSameHashCodeAs(new GoedeDoel(GOEDE_DOEL_NAAM));
-//    }
+    @Test
+    void doelenMetZelfdeNaamZijnGelijk() {
+        var goedDoel = new GoedeDoel(GOEDE_DOEL_NAAM);
+        assertThat(goedeDoel).isEqualTo(goedDoel);
+    }
+
+    @Test
+    void doelenMetVerschillendeNaamZijnVerschillend() {
+        var slechtDoel = new GoedeDoel(SLECHTE_DOEL_NAAM);
+        assertThat(goedeDoel).isNotEqualTo(slechtDoel);
+    }
+
+    @Test
+    void doelEqualsAnderTypeObject() {
+        assertThat(goedeDoel).isNotEqualTo(BigDecimal.ZERO);
+    }
+
+    @Test
+    void gelijkeDoelenHebbenZelfdeHashCode() {
+        assertThat(goedeDoel).hasSameHashCodeAs(new GoedeDoel(GOEDE_DOEL_NAAM));
+    }
 }
