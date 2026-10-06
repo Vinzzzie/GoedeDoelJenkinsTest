@@ -1,6 +1,7 @@
 package be.vdab;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 class GoedeDoel {
     private final String naam;
@@ -25,6 +26,11 @@ class GoedeDoel {
     @Override
     public boolean equals(Object object) {
         return object instanceof GoedeDoel ander && naam.equalsIgnoreCase(ander.naam);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(naam, opbrengst);
     }
 }
 
