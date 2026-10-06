@@ -14,7 +14,7 @@ class GoedeDoelTest {
     @BeforeEach
     void setUp() {
         this.goedeDoel = new GoedeDoel(GOEDE_DOEL_NAAM);
-//        this.goedeDoel.setOpbrengst(BigDecimal.ZERO);
+        this.goedeDoel.setOpbrengst(BigDecimal.ZERO);
     }
 
     @Test
