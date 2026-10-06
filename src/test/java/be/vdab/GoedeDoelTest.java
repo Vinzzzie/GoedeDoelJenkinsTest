@@ -9,6 +9,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class GoedeDoelTest {
     private static final String GOEDE_DOEL_NAAM = "DamiaanActie";
+    private static final String SLECHTE_DOEL_NAAM = "ArtsenZonderGrenzen";
     private GoedeDoel goedeDoel;
 
     @BeforeEach
@@ -27,9 +28,15 @@ class GoedeDoelTest {
         assertThat(goedeDoel.getOpbrengst()).isEqualTo(BigDecimal.ZERO);
     }
 
-//    @Test
-//    void setOpbrengst() {
-//        goedeDoel.setOpbrengst(BigDecimal.ONE);
-//        assertThat(goedeDoel.getOpbrengst()).isEqualTo(BigDecimal.ONE);
-//    }
+    @Test
+    void doelenMetZelfdeNaamZijnGelijk() {
+        var goedDoel = new GoedeDoel(GOEDE_DOEL_NAAM);
+        assertThat(goedeDoel).isEqualTo(goedDoel);
+    }
+
+    @Test
+    void doelenMetVerschillendeNaamZijnVerschillend() {
+        var slechtDoel = new GoedeDoel(SLECHTE_DOEL_NAAM);
+        assertThat(goedeDoel).isNotEqualTo(slechtDoel);
+    }
 }
