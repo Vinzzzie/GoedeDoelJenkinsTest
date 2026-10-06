@@ -21,5 +21,10 @@ class GoedeDoel {
     void setOpbrengst(BigDecimal opbrengst) {
         this.opbrengst = opbrengst;
     }
+
+    @Override
+    public boolean equals(Object object) {
+        return object instanceof GoedeDoel ander && naam.equalsIgnoreCase(ander.naam);
+    }
 }
 

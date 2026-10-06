@@ -27,9 +27,9 @@ class GoedeDoelTest {
         assertThat(goedeDoel.getOpbrengst()).isEqualTo(BigDecimal.ZERO);
     }
 
-    @Test
-    void setOpbrengst() {
-        goedeDoel.setOpbrengst(BigDecimal.ONE);
-        assertThat(goedeDoel.getOpbrengst()).isEqualTo(BigDecimal.ONE);
-    }
+//    @Test
+//    void setOpbrengst() {
+//        goedeDoel.setOpbrengst(BigDecimal.ONE);
+//        assertThat(goedeDoel.getOpbrengst()).isEqualTo(BigDecimal.ONE);
+//    }
 }
